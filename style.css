@@ -20,18 +20,19 @@
     padding: 14px 16px;
     text-decoration: none;
     font-size:17px;
-    border-bottom: 4px solid;
 }
 
 #topnav a:hover{    /*Links on hover */
     background-color: #224f24; 
     color: #ffffff;
-    border-color: #40a5c3;
+    border-bottom: 4px solid;
+    border-color: #000000;
 }
 
 #topnav a.active{
     background-color: #4CAF50;
-    color: white;
+    color: #000000;
+    border-bottom: 4px solid;
 }
 
 #topnav #book_now{
