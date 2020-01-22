@@ -13,7 +13,7 @@
     <div id="topnav">
         <a class="page active" href="index.html">Home</a>
         <a class="page" href="gallery/">Gallery</a>
-        <a class="page" id="Download" href="download/">Book now</a>
+        <a class="page" id="book_now" href="book/">Book now</a>
     </div>
 
     <h1>Villa One</h1>
@@ -21,7 +21,31 @@
         <p>
             Enjoy your summer in a luxury Villa
         </p>
-		(slider)
+        <!-- Slideshow -->
+        <div class="slideshow-container">
+
+			<div class="mySlides fade">
+			  <div class="numbertext">1 / 3</div>
+				<img src="/images/Pool.jpg" style="width:100%; height:auto;">
+			  <div class="text">Pool</div>
+			</div>
+
+			<div class="mySlides fade">
+			  <div class="numbertext">2 / 3</div>
+				<img src="/images/BBQ.jpg" style="width:100%; height:auto;">
+			  <div class="text">BBQ</div>
+			</div>
+
+			<div class="mySlides fade">
+			  <div class="numbertext">3 / 3</div>
+			  <img src="/images/Bedroom.jpg" style="width:100%; height:auto;">
+			  <div class="text">Bedroom</div>
+			</div>
+
+			<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+			<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+        </div>
     </div>
     
 
@@ -45,7 +69,8 @@
 
 
 
-     <script src="javascript.js"></script>   
+    <script src="javascript.js"></script> 
+    <script src="gallery/slideshow.js"></script>  
 </body>
     
 </html>

@@ -1,29 +1,32 @@
-body {
-	background-color: gray;
-}
+/* body {
+	background-color: white;
+} */
 
 /* TOP NAVIGATION BAR */
 #topnav{
-    background-color: #333;
+    background-color: rgb(255, 255, 255);
     overflow: hidden;
     margin-left: 10%;
     margin-right: 10%;
     position: sticky;
     top: 0;
+    z-index:2;
 }
 
 #topnav a{  /*Links*/
     float: left;
-    color: #f2f2f2;
+    color: #000000;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
     font-size:17px;
+    border-bottom: 4px solid;
 }
 
 #topnav a:hover{    /*Links on hover */
-    background-color: #224f24;
-    color: white;
+    background-color: #224f24; 
+    color: #ffffff;
+    border-color: #40a5c3;
 }
 
 #topnav a.active{
@@ -31,35 +34,22 @@ body {
     color: white;
 }
 
-#topnav #Download{
+#topnav #book_now{
     background-color: #4CAF50;
     color: white;
     float: right;
-    margin-right: 30
+    margin-right: 30;
 }
 
-#topnav #Download:hover{
+#topnav #book_now:hover{
     background-color: #224f24;
     color: white;
 }
 
-#topnav #Download.active{
+#topnav #book_now.active{
     background-color: #4CAF50;
     color: black;
     
-}
-
-/*Download table */
-thead{
-    background-color: #4CAF50;
-    color: white; 
-}
-
-td a{
-    background-color: lightblue;
-    color: white;
-    text-decoration: underline;
-    font-size: 17px;
 }
 
 /* LOGO */
@@ -146,7 +136,7 @@ td a{
 }
 
 .active, .dot:hover {
-  background-color: #717171;
+  background-color: #303030;
 }
 
 /* Fading animation */
@@ -165,4 +155,52 @@ td a{
 @keyframes fade {
   from {opacity: .4}
   to {opacity: 1}
+}
+
+/* Responcive Gallery */
+div.gallery {
+  border: 1px solid #ccc;
+}
+
+div.gallery:hover {
+  border: 1px solid #777;
+}
+
+div.gallery img {
+  width: 100%;
+  height: auto;
+}
+
+div.desc {
+  padding: 15px;
+  text-align: center;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.responsive {
+  padding: 0 6px;
+  float: left;
+  width: 24.99999%;
+}
+
+@media only screen and (max-width: 700px) {
+  .responsive {
+    width: 49.99999%;
+    margin: 6px 0;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .responsive {
+    width: 100%;
+  }
+}
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
 }
