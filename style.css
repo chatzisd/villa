@@ -1,76 +1,195 @@
+html,
 body {
-	background-color: rgb(255, 255, 255);
-} 
+  background-color: rgb(255, 255, 255);
+  height: 100%;
+  width: 100%;
+  margin: 0px;
+  padding: 0px;
+  font-size: calc(0.75em + 1vmin);
+}
 
+/* Burger Menu */
+#burger-menu {
+  position: absolute !important;
+  margin-top: -17px !important;
+}
 /* TOP NAVIGATION BAR */
-#topnav{
-    background-color: rgba(92, 187, 171, 0.712);
-    overflow: hidden;
-    margin-left: 10%;
-    margin-right: 10%;
-    position: sticky;
-    top: 0;
-    z-index:2;
+#topnav {
+  background-color: rgba(46, 46, 46, 0.993);
+  overflow: hidden;
+  padding: 0 20px;
+  /* margin-left: 10%; */
+  /* margin-right: 10%; */
+  position: sticky;
+  top: 0px;
+  z-index: 10;
 }
 
-#topnav a{  /*Links*/
-    float: left;
-    color: #000000;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    font-size:17px;
-    margin-bottom: 0px;
+#topnav a {
+  /*Links*/
+  float: left;
+  color: #000000;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  margin-bottom: 0px;
 }
 
-#topnav a:hover{    /*Links on hover */
-    background-color: #224f24; 
-    color: #ffffff;
-    border-bottom: 4px solid;
-    border-color: #000000;
+#topnav a:hover {
+  /*Links on hover */
+  background-color: #00087e;
+  color: #ffffff;
+  border-bottom: 4px solid;
+  border-color: #000000;
 }
 
-#topnav a.active{
-    background-color: #4CAF50;
-    color: #000000;
-    border-bottom: 4px solid;
+#topnav a.active {
+  background-color: #3256cc;
+  color: #000000;
+  border-bottom: 4px solid;
 }
 
-#topnav #book_now{
-    background-color: #4CAF50;
-    color: white;
-    float: right;
-    margin-right: 30;
+#topnav #book_now {
+  background-color: #00087e;
+  color: white;
+  float: right;
+  margin-right: 30;
+  height: 100;
 }
 
-#topnav #book_now:hover{
-    background-color: #224f24;
-    color: white;
+#topnav #book_now:hover {
+  background-color: #3256cc;
+  color: white;
 }
 
-#topnav #book_now.active{
-    background-color: #4CAF50;
-    color: black;
-    
+#topnav #book_now.active {
+  background-color: #3256cc;
+  color: black;
 }
 
 /* LOGO */
-#logo_image{
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 50%;
-    
+#logo_image {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+/* Amenities -------------------------*/
+
+.amenities-parent {
+  display: inline-block;
+  padding: 3vh;
+}
+/* Title */
+#Amenities-title {
+  text-align: right;
+  padding-right: 3%;
+}
+#Amenities-secondary-title-desc {
+  padding: 3vh;
+  /* font-size: ; */
+}
+.column-one {
+  float: left;
+  width: 50%;
+  /* padding: 2vh; */
+}
+.row::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+/* List-------------------------*/
+.list_item {
+  display: block;
+  /* text-align: center; */
+}
+.list_item .list_left {
+  overflow: hidden;
+  text-align: center;
+  word-wrap: break-word;
+  float: left;
+}
+.list_item .list_right {
+  margin-left: 100px;
+}
+.list_item .list_right h4 {
+  margin-bottom: 1vw;
+}
+.list_left .list_right {
+  display: inline;
+}
+.desc {
+  color: #838e91;
+}
+/* end list------------------ */
+
+/* Responsive */
+/* Home Page amenities list from 2 column to 1 column */
+@media screen and (max-width: 1000px) {
+  .column-one {
+    width: 100%;
+  }
+  #burger-menu {
+    width: 35px;
+    height: 5px;
+    background-color: black;
+    margin: 6px 0;
+  }
+}
+
+@media only screen and (max-width: 479px) {
+  h4 {
+    font-size: 13px;
+    line-height: 19px;
+  }
+  #topnav {
+    display: none;
+  }
+  #burger-menu {
+    width: 35px;
+    height: 5px;
+    background-color: black;
+    margin: 6px 0;
+  }
+}
+@media only screen and (max-width: 1239px) {
+  #topnav {
+    display: none;
+  }
+  .burger-menu {
+    width: 35px;
+    height: 5px;
+    background-color: rgb(0, 0, 0);
+    margin: 6px 0;
+  }
+}
+
+/* Booking form ------------------------------------------*/
+.booking-form {
+  display: inline-block;
+  /* padding: 10px 10px; */
+  margin: 3vh;
+  padding: 2vh;
+  background-color: rgb(194, 194, 194);
 }
 
 /*------------------------Slideshow ------------------------------------*/
-* {box-sizing:border-box}
+* {
+  box-sizing: border-box;
+}
 
 /* Slideshow container */
 .slideshow-container {
-  max-width: 1000px;
+  max-width: 100%;
+  /* max-height: 90%; */
   position: relative;
   margin: auto;
+  overflow: hidden;
+  /* width: 100%; */
+  height: auto;
 }
 
 /* Hide the images by default */
@@ -79,7 +198,8 @@ body {
 }
 
 /* Next & previous buttons */
-.prev, .next {
+.prev,
+.next {
   cursor: pointer;
   position: absolute;
   top: 50%;
@@ -101,8 +221,9 @@ body {
 }
 
 /* On hover, add a black background color with a little bit see-through */
-.prev:hover, .next:hover {
-  background-color: rgba(0,0,0,0.8);
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
 }
 
 /* Caption text */
@@ -141,7 +262,8 @@ body {
   transition: background-color 0.6s ease;
 }
 
-.active, .dot:hover {
+.active,
+.dot:hover {
   background-color: #303030;
 }
 
@@ -154,13 +276,21 @@ body {
 }
 
 @-webkit-keyframes fade {
-  from {opacity: .4}
-  to {opacity: 1}
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 @keyframes fade {
-  from {opacity: .4}
-  to {opacity: 1}
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 /*------------------ Responsive Gallery ------------------*/
